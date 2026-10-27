@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account | Pranathi Web Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at top,#142542,#060b18 65%);color:#f1f5f9;font-family:Inter,system-ui,sans-serif}.card{width:min(100%,560px);padding:clamp(24px,5vw,40px);border-radius:24px;background:rgba(13,21,39,.88);border:1px solid rgba(148,163,184,.2);box-shadow:0 24px 70px #0006}h1{color:#7dd3fc;letter-spacing:-.7px}p{overflow-wrap:anywhere;color:#cbd5e1;line-height:1.7}button,a{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:10px 8px 0 0;padding:12px 18px;border-radius:12px;border:1px solid #38bdf8;background:#38bdf8;color:#07111f;font:600 14px inherit;text-decoration:none;cursor:pointer}a{background:transparent;color:#7dd3fc}#account-content[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main class="card">
+  <p id="loading">Checking your sign-in…</p>
+  <section id="account-content" hidden>
+    <h1>You're signed in</h1>
+    <p>Your account session is active.</p>
+    <p><strong>Email:</strong> <span id="user-email"></span></p>
+    <a href="index.html">Return to portfolio</a>
+    <button id="account-logout" type="button">Log out</button>
+  </section>
+  <p id="account-error" role="alert"></p>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth-config.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
